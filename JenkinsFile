@@ -4,8 +4,6 @@ properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKe
 
 def mavenHome = tool name : 'maven 3.9.1'
 
-echo "The job namr is : ${JOB_NAME}"
-echo "The Branch name is : ${BRANCH_NAME}"
 stage('CheckoutCode'){
 git credentialsId: '6e122432-4ec0-4801-9160-a34eb71102f6', url: 'https://github.com/villagemarketzone/maven-web-application.git'
 
@@ -13,7 +11,8 @@ git credentialsId: '6e122432-4ec0-4801-9160-a34eb71102f6', url: 'https://github.
 stage('Build'){
 sh "${mavenHome}/bin/mvn clean package"
 }
-/*stage('SonarQubeReport'){
+/*
+stage('SonarQubeReport'){
     
     sh "${mavenHome}/bin/mvn clean package sonar:sonar"
 }
@@ -25,5 +24,6 @@ stage('DeployToTomcat'){
 sshagent(['c9cca7cb-fe4b-4bc7-bc76-b669de9eac47']) {
     sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@35.180.25.122:/opt/apache-tomcat-9.0.74/webapps/"
 }
-} */
+}
+*/
 }//node closing
