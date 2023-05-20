@@ -98,13 +98,13 @@
 	    <repository>
 	      <id>nexus</id>
 	      <name>City Bank Releases Nexus Repository</name>
-	      <url>http://35.180.197.62:8081/mithun/repository/citybank-release/</url>
+	      <url>http://13.38.17.223:8081/mithun/repository/citybank-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>City Bank Snapshot Nexus Repository </name>
-	      <url>http://35.180.197.62:8081/mithun/repository/citybank-snapshot/</url>
+	      <url>http://13.38.17.223:8081/mithun/repository/citybank-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
