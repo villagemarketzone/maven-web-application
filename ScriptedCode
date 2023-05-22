@@ -1,0 +1,30 @@
+node{
+    
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])    
+def mavenHome= tool name: 'maven 3.9.1'
+stage('CheckoutCode'){
+git credentialsId: '6e122432-4ec0-4801-9160-a34eb71102f6', url: 'https://github.com/villagemarketzone/maven-web-application.git'
+
+}
+stage('BuildCode')
+{
+sh "${mavenHome}/bin/mvn clean package"
+
+}
+/*
+stage('SonarQubeReports')
+{
+sh "${mavenHome}/bin/mvn sonar:sonar"
+}
+stage('UploadArtifactIntoNexus')
+{
+sh "${mavenHome}/bin/mvn clean deploy"
+}
+stage('DeployAppIntoTomcat'){
+    
+    sshagent(['24ab2c13-2461-485d-ac50-5af385a0661a']) {
+    sh "scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/HdfcPipelineScript/target/maven-web-application.war ec2-user@15.237.81.192:/opt/apache-tomcat-9.0.74/webapps"
+}
+}
+*/
+}//node end
