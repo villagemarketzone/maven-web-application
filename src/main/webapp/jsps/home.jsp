@@ -4,12 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>MithunTechnologies- Home Page</title>
+<title>Sakthivel- Home Page</title>
 <link href="images/mithunlogo.jpg" rel="icon">
 </head>
 </head>
 <body>
-	<h1 align="center">Welcome to Sakthivel</h1><b>Github WEB HOOK</b> <i>vel</i>
+	<h1 align="center">Welcome to Vignesh</h1><b>Github WEB HOOK</b> <i>vel</i>
 	<h1 align="center"> vignesh is the Boss of Devops</h1>
 <hr>
 <br>
