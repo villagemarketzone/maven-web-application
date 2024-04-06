@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: mavenwebappcontainer
-          image: velcsekrish/maven-web-application:3
+          image: krishvelcse/maven-web-application:3
           ports:
             - containerPort: 8080
           resources:
